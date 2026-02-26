@@ -35,11 +35,29 @@
     margin-left: 2rem;
     display: flex;
     align-items: center;
-    margin-top: 0.6rem;
+    margin-top: 1.5rem;
   }
+
+  @media (max-width: 450px) {
+
+  .tax-toggle {
+    margin-top: 1.5rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 370px) {
+
+  .tax-toggle {
+    margin-top: 1rem;
+    justify-content: center;
+    width: 18rem;
+    height: 8rem;
+  }
+}
 </style>
     <div id="filters">
-      <div class="filter">
+      <!-- <div class="filter">
         <div><i class="fa-solid fa-fire"></i></div>
         <p>Trending</p>
       </div>
@@ -74,8 +92,9 @@
       <div class="filter">
         <div><i class="fa-regular fa-snowflake"></i></div>
         <p>Arctic</p>
-      </div>
+      </div> -->
 
+      
       <div class="tax-toggle">
         <div class="form-check-reverse form-switch">
   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -83,11 +102,12 @@
 </div>
       </div>
     </div>
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3 ">
+    <br>
+    <div class="row row-cols-2 row-cols-md-2 row-cols-lg-3 mt-3 ">
         <% for(let listing of allListings){ %>
           <a href="/listings/<%=listing._id %>"class="listing-link">
     <div class="card col listing-card">
-  <img src="<%=listing.image.url%>" class="card-img-top" alt="listing_image" style="height: 20rem">
+  <img src="<%=listing.image.url%>" class="card-img-top" alt="listing_image" style="height: 17rem;">
     <div class="card-img-overlay">abcd</div>
   <div class="card-body">
     <p class="card-text">

@@ -26,6 +26,8 @@ body{
 }
 
 
+
+
 /* footer */
 .f-info-links a{
     text-decoration: none;
@@ -115,4 +117,48 @@ body{
 .show-card{
     padding-left: 0;
     padding-right: 0;
+}
+
+@media (max-width: 768px) {
+  #filters {
+    justify-content: flex-start;
+    padding-left: 8rem;
+    padding-top: 1rem;
+  }
+
+  .tax-toggle {
+    margin-left: 0rem;
+    margin-top: 1rem;
+  }
+}
+
+/* @media (max-width: 768px) {
+
+  .navbar-nav .nav-link {
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding: 0.5rem;
+  }
+} */
+
+/* Map */
+#map{
+    height: 400px;
+    width: 100%;
+}
+
+/* .hammy{
+    padding-top: 3rem !important;
+} */
+
+@media (max-width: 767px) {
+    .edit {
+        padding-top: 3rem !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .showTitle {
+        padding-top: 3rem !important;
+    }
 }

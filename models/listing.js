@@ -16,6 +16,17 @@ const listingSchema = new Schema({
   location: String,
   category: String,
   country: String,
+
+  geometry: {
+    type: {
+      type: String,
+      enum: ["Point"],
+    },
+    coordinates: {
+      type: [Number],
+    },
+  },
+
   reviews: [
     {
       type: Schema.Types.ObjectId,
@@ -25,12 +36,6 @@ const listingSchema = new Schema({
   owner: {
     type: Schema.Types.ObjectId,
     ref: "User",
-  }
-});
-
-listingSchema.post("findOneAndDelete",async (listing) => {
-  if(listing){
-  await Review.deleteMany({_id : {$in: listing.reviews}})
   }
 });
 
